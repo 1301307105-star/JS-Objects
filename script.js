@@ -7,7 +7,7 @@ console.log("Script started")
 function processForm() {
     console.log("click");
     // TODO: prevent this function from reloading the page when the form is submitted
-
+        event.preventDefault();
     // Create a newUser object that has all the user's info from the form
     let newUser = {
         name: document.getElementById("name").value,
@@ -16,7 +16,7 @@ function processForm() {
         favColor: document.getElementById("favColor").value
     }
     // TODO: Call the addUser function and pass the newUser object as a parameter
-
+     addUser(newUser);
 }
 
 function addUser(user) {
